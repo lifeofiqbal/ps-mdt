@@ -45,11 +45,11 @@ Config.Sharing = {
         { -- Example: FIB and GOV 
             viewers = {
                 'fib',
-                'gov'
+                'government'
             },
             targets = {
-                'lspd',
-                'bcso',
+                'police',
+                'sheriff',
                 'sahp'
             },
             types = {
@@ -67,7 +67,7 @@ Config.Sharing = {
 Config.Keys = {
     -- https://docs.fivem.net/docs/game-references/controls/ | Default QWERTY
     OpenMDT = {
-        enabled = true, -- Enable/disable keybind (boolean)
+        enabled = false, -- Enable/disable keybind (boolean)
         key = 'F11', -- Key to open MDT (string)
     },
 }
@@ -110,7 +110,7 @@ Config.Fuel = 'LegacyFuel' -- Fuel resource name for vehicle fuel management
 
 -- Weapon Registration
 Config.RegisterWeaponsAutomatically = true -- Auto-register weapons on purchase (ox_inventory and qb-inventory/qb-weapons)
-Config.RegisterCreatedWeapons = false -- Also auto-register weapons on item creation (ox_inventory only)
+Config.RegisterCreatedWeapons = true -- Also auto-register weapons on item creation (ox_inventory only)
 
 -- Impound Locations (vector4: x, y, z, heading)
 Config.ImpoundLocations = {
@@ -121,11 +121,9 @@ Config.ImpoundLocations = {
 -- Job Settings
 Config.PoliceJobType = "leo"
 Config.PoliceJobs = {
-    'lspd',
-    'bcso',
-    'sahp',
-    'fib',
-    'gov'
+    'police',
+    'sheriff',
+    'government'
 }
 
 Config.DojJobType = "doj"

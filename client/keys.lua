@@ -12,7 +12,6 @@ local CreateThread = CreateThread
 local IsPedSwimming = IsPedSwimming
 local SetNuiFocus = SetNuiFocus
 local SetNuiFocusKeepInput = SetNuiFocusKeepInput
-local SendNUI = SendNUI
 local RegisterNUICallback = RegisterNUICallback
 
 -- Permissions check ------------------------------------------

@@ -1,5 +1,11 @@
 local resourceName = tostring(GetCurrentResourceName())
-local QBCore = exports['qb-core']:GetCoreObject()
+local okQBCore, QBCore = pcall(function()
+    return exports['qb-core']:GetCoreObject()
+end)
+
+if not okQBCore then
+    QBCore = nil
+end
 
 -- Impound locations - override in config if needed
 local ImpoundLocations = Config.ImpoundLocations or {
@@ -50,6 +56,11 @@ end
 
 -- Spawn vehicle at impound location
 local function TakeOutImpound(data, garageIndex)
+    if not QBCore then
+        ps.notify('Impound spawn is not configured for this framework', 'error')
+        return
+    end
+
     local coords = ImpoundLocations[garageIndex]
     if not coords then
         ps.notify('Invalid impound location', 'error')
