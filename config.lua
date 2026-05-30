@@ -96,11 +96,11 @@ Config.WolfknightNotifyTime = 5000 -- Duration (ms) for plate reader notificatio
 Config.PlateScanForDriversLicense = true -- Check driver's license on plate scan
 
 -- Fingerprint Settings
-Config.FingerprintAutoFilled = false -- Auto-populate fingerprints on citizen profiles (if false, officers must manually add fingerprints)
+Config.FingerprintAutoFilled = true -- Auto-populate fingerprints on citizen profiles (if false, officers must manually add fingerprints)
 
 -- Fingerprint Scan Integration
 Config.FingerprintScan = {
-    enabled = false,                                         -- Enable fingerprint scan trigger from MDT
+    enabled = true,                                         -- Enable fingerprint scan trigger from MDT
     officerEvent = 'police:client:showFingerprint',          -- Client event triggered on the officer
     suspectEvent = 'police:client:showFingerprint',          -- Client event triggered on the suspect
 }
